@@ -25,5 +25,4 @@ int main()
 	<< "\nThe capacity of integers is:" << intergers.capacity();
 	cout << "\n\nOutput array using pointer notation";
 
-	
 }
