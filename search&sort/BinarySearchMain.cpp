@@ -14,7 +14,7 @@ int main()
 
 	// get input from user
 	cout << "\nPlease enter an integer value (-1 to quit)";
-	cin >> searchInt; // read an int form user
+	cin >> searchInt; // read an int form user 
 	cout << endl;
 
 
@@ -33,7 +33,7 @@ int main()
 		cout << "\n\nPlease enter an integer value (-1 to quit)";
 		cin >> searchInt;
 		cout << endl;
- 	}
+	}
 
 
 }
