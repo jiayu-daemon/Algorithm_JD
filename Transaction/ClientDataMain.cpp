@@ -18,7 +18,6 @@ int main()
 		exit(1);
 	}
 
-
 	ClientData blankClient;
 
 	for(int i = 0 ; i < 100 ; i++)
