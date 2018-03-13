@@ -42,6 +42,6 @@ C++提供了数据类型char，每个char占据1个字节的内存空间。C++
 
 欢迎关注作者微信公众号《爬行极客》
 
-![Alt text](./imageg.jpg)
+![Alt text](./image.jpg)
 
 ![image](https://github.com/jiayu-daemon/daemon-edu/blob/master/author/qrcode_for_gh_1b7403ac5bb0_344.jpg)
