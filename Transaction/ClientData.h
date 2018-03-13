@@ -9,7 +9,7 @@ class ClientData
 {
 public:
 	//default ClientData constructor
-	ClientData(int = 0, string = "", string = "", double = 0.0)
+	ClientData(int = 0, string = "", string = "", double = 0.0);
 
 	// accessor functions for accountNumber
 	void setAccountNumber(int);
