@@ -19,8 +19,7 @@ int main()
 
 
 	// repeated input an integer; -1 terminates the program
-	while(searchInt != -1)
-	{
+	while(searchInt != -1){
 		// use binary search to try to find integer
 		position = searchVector.binarySearch(searchInt);
 
