@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <vector>
 
 using namespace std;
@@ -54,7 +55,21 @@ void SortArray <T>::fill_user_data(int * userData)
 template <typename T>
 int SortArray <T> ::mp_sort() const
 {
-
+	T * tmpPtr = new T[size];
+	int sum = 0;
+	for(int i = 0; i < size -1; i++){
+		for(int j = 0; j < size -i-1; j++){
+			sum++;
+			if(dataPtr[j] > dataPtr[j+1]){
+				T temp;
+				temp = dataPtr[j];
+				dataPtr[j] = dataPtr[j+1];
+				dataPtr[j+1] = temp;
+			}
+		}
+	}
+	delete [] tmpPtr;
+	return sum;
 }
 
 
@@ -62,7 +77,24 @@ int SortArray <T> ::mp_sort() const
 template <typename T>
 int SortArray <T>::xz_sort() const
 {
+	int sum = 0;
+	int i,j,index;
+	for(i = 0; i < size-1; i++){
+		index = i;
+		for(j = i+1; j < size; j++){
+			sum++;
+			if(dataPtr[j] < dataPtr[index]){
+				index = j;
+			}
+		}
+		if(index != i){
+			T temp = dataPtr[index]; // Min value
+			dataPtr[index] = dataPtr[i];//
+			dataPtr[i] = temp;
+		}
+	}
 
+	return sum;
 }
 
 // 打印数据
@@ -78,22 +110,25 @@ void SortArray <T>::printData() const
 
 int main()
 {
-	int intData[] = {3,4,6,8,1,2,7,9,5};
-	SortArray <int> intSortArray(9);
+	int intData[] = {3,4,6,8,1,2,7,9,5,10,11};
+	int sum;
+	SortArray <int> intSortArray(11);
 
 	intSortArray.fill_user_data(intData);
 	cout << "row data\n";
 	intSortArray.printData();
 
 	cout << "begin mp sort\n";
-	intSortArray.mp_sort();
+	sum = intSortArray.mp_sort();
+	cout << "sum = " << sum << endl;
 	cout << "mp sort result\n";
 	intSortArray.printData();
 
-	cout << "begin xz sort\n";
-	intSortArray.xz_sort();
-	cout << "xz sort result\n";
-	intSortArray.printData();
+	// cout << "begin xz sort\n";
+	// sum = intSortArray.xz_sort();
+	// cout << "sum = " << sum << endl;
+	// cout << "xz sort result\n";
+	// intSortArray.printData();
 
 	return 0;
 }
