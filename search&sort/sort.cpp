@@ -29,7 +29,6 @@ template <typename T>
 SortArray <T>::SortArray(int s):size(s>0?s:9),dataPtr(new T[size])
 {
 	//empty body
-
 }
 
 //填充数据
@@ -55,7 +54,7 @@ void SortArray <T>::fill_user_data(int * userData)
 template <typename T>
 int SortArray <T> ::mp_sort() const
 {
-	T * tmpPtr = new T[size];
+	//T * tmpPtr = new T[size];
 	int sum = 0;
 	for(int i = 0; i < size -1; i++){
 		for(int j = 0; j < size -i-1; j++){
@@ -68,7 +67,7 @@ int SortArray <T> ::mp_sort() const
 			}
 		}
 	}
-	delete [] tmpPtr;
+	//delete [] tmpPtr;
 	return sum;
 }
 
@@ -93,7 +92,6 @@ int SortArray <T>::xz_sort() const
 			dataPtr[i] = temp;
 		}
 	}
-
 	return sum;
 }
 
@@ -112,8 +110,8 @@ int main()
 {
 	int intData[] = {3,4,6,8,1,2,7,9,5,10,11};
 	int sum;
-	SortArray <int> intSortArray(11);
 
+	SortArray <int> intSortArray(11);
 	intSortArray.fill_user_data(intData);
 	cout << "row data\n";
 	intSortArray.printData();
@@ -132,3 +130,8 @@ int main()
 
 	return 0;
 }
+
+// 
+// 
+// 
+// 
