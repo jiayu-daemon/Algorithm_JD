@@ -8,9 +8,9 @@ int main()
 	// no object exitst; use class name and binary scope resolution
 	// operator to access static member fuction getCount
 
-	cout << "Number of employees before instantiation of any objects is "
-	<< Employee::getCount() << endl;   // use class name
+	cout << "Number of employees before instantiation of any objects is "<< Employee::getCount() << endl;   
 
+	// use class name
 	// the following scope create and destroys
 	// Employee objects before main terminates
 	{
@@ -35,6 +35,8 @@ int main()
 lim@ubuntu11204:/mnt/hgfs/personalDir/Algorithm_JD/cplusplus$ 
 
 ./Employee Number of employees before instantiation of any objects is 0
+
+
 Employee constuctor forSusan Baker called.
 Employee constuctor forRobert Jones called.
 Number of employees after objects are instantiated is2
